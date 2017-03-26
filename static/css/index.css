@@ -2,3 +2,7 @@ img {
         width: 500px;
         /*height: 500px;*/
       }
+
+.logo{
+  font-family: 'Bungee Inline', cursive !important;
+}
