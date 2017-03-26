@@ -2,7 +2,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-	url(r'^$', views.MemberList.as_view(), name='home'),
+	url(r'^member/$', views.MemberList.as_view(), name='home'),
 	url(r'^member/(?P<pk>[0-9]+)/$', views.MemberDetail.as_view(),
 		name='detail'),
 	# url(r'^member/new$', views.MemberCreate.as_view(), name='new'),
