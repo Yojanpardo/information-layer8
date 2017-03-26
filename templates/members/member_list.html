@@ -14,10 +14,10 @@
 			{% for member in object_list %}
 				<li>
 					<div class="chip">
-						<a href="{% url "members:detail" product.id %}">
+						<a href="{% url "members:detail" member.id %}">
 							{{ member.name }}
 						</a>
-						<img src="{{ member.image.url }}" alt="">
+						<img src="{{ member.photo.url }}" alt="">
 					</div>
 				</li>
 			{% endfor %}
