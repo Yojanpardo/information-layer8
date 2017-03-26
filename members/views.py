@@ -6,7 +6,7 @@ from django.views.generic.edit import DeleteView
 from .mixins import LoginRequiredMixin
 from django.core.urlresolvers import reverse_lazy
 from .models import Member
-from .forms import ProductForm
+from .forms import MemberForm
 
 # class MemberCreate(LoginRequiredMixin, CreateView):
 #     model = Member
