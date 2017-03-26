@@ -4,9 +4,10 @@ from django.views.generic import TemplateView
 from django.contrib.auth.views import logout
 from django.conf.urls.static import static
 from django.conf import settings
+from material.frontend import urls as frontend_urls
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', admin.site.urls, name='admin'),
     url('', include('social_django.urls', namespace='social')),
 	url(r'^$', TemplateView.as_view(template_name="home.html"),
         name="home"),

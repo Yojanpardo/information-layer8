@@ -24,6 +24,14 @@
                 <i class="material-icons">menu</i>
               </a>
       				<ul class="right hide-on-med-and-down">
+                <li>
+        					{% if user and not user.is_anonymous %}
+                    <!-- Revisar el reverse match de esta url -->
+        						<a href="http://authlogin.com:8000/admin/">
+                      Admin
+                    </a>
+        					{% endif %}
+        				</li>
         				<li>
         					{% if user and not user.is_anonymous %}
         						<a href="#!">{{ user.get_full_name }}</a>
@@ -42,6 +50,14 @@
         				</li>
       				</ul>
       				<ul class="side-nav" id="mobile-demo">
+                <li>
+        					{% if user and not user.is_anonymous %}
+                    <!-- Revisar el reverse match de esta url -->
+        						<a href="http://authlogin.com:8000/admin/">
+                      Admin
+                    </a>
+        					{% endif %}
+        				</li>
         				<li>
         					{% if user and not user.is_anonymous %}
         						<a href="#!">{{ user.get_full_name }}</a>
@@ -91,6 +107,6 @@
     <script type="text/javascript"  src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
   	<script src="{% static 'js/materialize.js' %}"></script>
-  	<!-- <script src="{% static 'js/code.js' %}"></script> -->
+  	<script src="{% static 'js/code.js' %}"></script>
 </body>
 </html>
