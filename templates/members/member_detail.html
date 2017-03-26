@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block page_title %}
+	{{ product.name }}
+{% endblock %}
+{% block content %}
+	<div class="container">
+		<div class="row center">
+			<h3 class="teal-text">{{ member.name }}</h3>
+		</div>
+		<div class="row center">
+			<div class="col s12 m6">
+				<p class="flow-text">
+					{{ member.personal_skills }}
+				</p>
+				<p class="flow-text">
+					{{ member.email }}
+				</p>
+			</div>
+			<div class="col s12 m6">
+				<img src="{{ member.photo.url }}" alt="">
+			</div>
+
+		</div>
+
+	</div>
+{% endblock %}
