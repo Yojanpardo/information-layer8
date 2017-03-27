@@ -8,21 +8,37 @@
 			<div class="row"></div>
 			<h3 class="blue-grey-text">Our Team Work</h2>
 		</div>
-		<div class="row center">
+		<div class="container">
+			<div class="row center">
 
-			<h3 class="flow-text">Recuerda que la capa 8 es la mas importante</h3>
 
-			{% for member in object_list %}
-				<li>
-					<div class="chip">
-						<a href="{% url "members:detail" member.id %}">
-							{{ member.name }}
-						</a>
-						<img src="{{ member.photo.url }}" alt="">
-					</div>
-				</li>
-			{% endfor %}
+
+				{% for member in object_list %}
+				<div class="col s6 m4 l2">
+					<div class="card">
+    				<div class="card-image waves-effect waves-block waves-light">
+      				<img class="activator" src="{{ member.photo.url }}">
+    				</div>
+				    <div class="card-content">
+				      <span class="card-title activator grey-text text-darken-4">
+								<a href="{% url "members:detail" member.id %}">{{ member.name }}</a>
+							</span>
+				    </div>
+				    <div class="card-reveal">
+				      <span class="card-title grey-text text-darken-4">
+								{{ member.name }}
+								<i class="material-icons right">close</i></span>
+				      <p class="flow-text">
+				      	{{member.team_skills}}
+				      </p>
+				    </div>
+  				</div>
+				</div>
+				{% endfor %}
+			</div>
+
 		</div>
+
 
 	</div>
 {% endblock %}
