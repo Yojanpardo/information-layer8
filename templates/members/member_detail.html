@@ -3,24 +3,49 @@
 	{{ product.name }}
 {% endblock %}
 {% block content %}
-	<div class="container">
-		<div class="row center">
-			<h3 class="teal-text">{{ member.name }}</h3>
-		</div>
-		<div class="row center">
-			<div class="col s12 m6">
-				<p class="flow-text">
-					{{ member.personal_skills }}
-				</p>
-				<p class="flow-text">
-					{{ member.email }}
-				</p>
-			</div>
-			<div class="col s12 m6">
-				<img src="{{ member.photo.url }}" alt="">
-			</div>
 
-		</div>
-
+<div class="">
+	<div class="row center z-depth-1 lime lighten-3">
+		<div class="row"></div>
+		<h2 class="flow-text blue-grey-text">{{ member.name }} {{ member.last_name }}</h2>
 	</div>
+</div>
+<div class="container">
+	<div class="row center">
+		<div class="col s12 m6">
+			<img class="responsive-img circle" src="{{ member.photo.url }}" alt="">
+		</div>
+		<div class="col s12 m6">
+			<div class="row">
+				<div class="chip orange">
+			    {{member.team_skills}}
+			  </div>
+				<div class="chip teal">
+			    {{member.personal_skills}}
+			  </div>
+				<div class="chip red">
+			    {{member.weakness}}
+			  </div>
+				<div class="chip grey darken-1">
+			    {{member.illness}}
+			  </div>
+				<div class="chip brown">
+			    {{member.under_presure}}
+			  </div>
+			</div>
+			<div class="row">
+				<div class="col s12 m6 grey darken-4">
+						<p class="flow-text white-text">{{member.email}}</p>
+				</div>
+				<div class="col s12 m6 lime darken-2">
+						<p class="flow-text">{{member.phone}}</p>
+				</div>
+				<div class="col s12 m6 grey darken-1">
+						<p class="flow-text">{{member.address}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 {% endblock %}
