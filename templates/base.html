@@ -39,9 +39,11 @@
         					{% endif %}
         				</li>
                 <li>
+                    {% if user and not user.is_anonymous %}
         						<a href="{% url "members:member" %}">
                       Team
                     </a>
+                    {% endif %}
         				</li>
         				<li>
         					{% if user and not user.is_anonymous %}

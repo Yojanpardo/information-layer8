@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'members',
+    'events',
     'flat_responsive',
     'django.contrib.admin',
     'django.contrib.auth',
