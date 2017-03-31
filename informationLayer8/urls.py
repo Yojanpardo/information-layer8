@@ -14,5 +14,6 @@ urlpatterns = [
 	url(r'^users/logout/$',	logout, {'next_page': 'home'},
         name="logout"),
     url(r'^', include('members.urls', namespace='members')),
+    url(r'^', include('events.urls', namespace='events')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

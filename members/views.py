@@ -15,7 +15,7 @@ from .forms import MemberForm
 #               'personal_skills', 'team_skills', 'weakness',
 #               'under_presure',]
 
-class MemberList(ListView):
+class MemberList(LoginRequiredMixin, ListView):
     model = Member
 
 class MemberDetail(LoginRequiredMixin, DetailView):

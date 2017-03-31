@@ -11,12 +11,20 @@
 	<div class="row"></div>
 	<div class="row"></div>
 	<div class="row"></div>
-	<div class="row"></div>
+	<div class="row">
+		<div class="col">
+			<h1>
+				Agregar Un saludo de bienvenida y que le diga que hace la apliacación
+				 y que puede hacer dentro de ella como dos botones para ver los eventos
+				 o ver el equipo.
+			</h1>
+		</div>
+	</div>
   <div class="row center">
     <div class="col s12">
        {% if user and not user.is_anonymous %}
        <p class="flow-text">Welcome back</p>
-       <p class="flow-text blue-grey-text"> 
+       <p class="flow-text blue-grey-text">
        	{{ user.get_full_name }}
        </p>
        {% endif %}
