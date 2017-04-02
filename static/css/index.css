@@ -6,16 +6,3 @@ img {
 .logo{
   font-family: 'Bungee Inline', cursive !important;
 }
-
-.border{
-  border: 3px solid black;
-}
-.border-team{
-  border: 3px solid #F57C00;
-}
-.border-personal{
-  border: 3px solid #009688;
-}
-.border-weakness{
-  border: 3px solid #D32F2F;
-}
