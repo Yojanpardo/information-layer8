@@ -10,7 +10,7 @@ from .forms import EventForm
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    success_url = reverse_lazy('events:home')
+    success_url = reverse_lazy('home')
     fields = ['date_start', 'date_end', 'title',
               'description', 'location', 'timezone',
               'organizer', 'email']
