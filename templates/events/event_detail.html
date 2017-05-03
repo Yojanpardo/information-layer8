@@ -29,14 +29,14 @@
     <!-- 3. Place event data -->
     <span class="addtocalendar atc-style-blue">
         <var class="atc_event">
-            <var class="atc_date_start">{{ date_start }}</var>
-            <var class="atc_date_end">{{ date_end }}</var>
-            <var class="atc_timezone">Europe/London</var>
+            <var class="atc_date_start">2017-05-03 17:16:25.825879</var>
+            <var class="atc_date_end">{{ event.date_end }}</var>
+            <var class="atc_timezone">{{ event.timezone }}</var>
             <var class="atc_title">{{ event.title }}</var>
-            <var class="atc_description">May the force be with you</var>
-            <var class="atc_location">Tatooine</var>
-            <var class="atc_organizer">Luke Skywalker</var>
-            <var class="atc_organizer_email">luke@starwars.com</var>
+            <var class="atc_description">{{ event.description }}</var>
+            <var class="atc_location">{{ event.location }}</var>
+            <var class="atc_organizer">{{ event.organizer }}</var>
+            <var class="atc_organizer_email">{{ event.email }}</var>
         </var>
     </span>
 {% endblock %}
