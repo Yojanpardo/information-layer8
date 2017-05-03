@@ -9,7 +9,6 @@ class Event(models.Model):
     date_start = models.CharField(max_length=255, default='2017-05-04 12:00:00')
     date_end = models.CharField(max_length=255, default='2017-05-04 12:00:00')
     description = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
     location = models.CharField(max_length=255)
     timezone = models.CharField(default='America/Bogota', choices=timezones, max_length=255)
     organizer = models.CharField(max_length=255)
