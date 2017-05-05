@@ -6,6 +6,19 @@
 	<div class="container">
 		<div class="row center">
 			<h3 class="teal-text">{{ event.title }}</h3>
+            <!-- 3. Place event data -->
+    <span class="addtocalendar btn blue-grey grey-text">
+        <var class="atc_event">
+            <var class="atc_date_start">2017-05-03 17:16:25.825879</var>
+            <var class="atc_date_end">{{ event.date_end }}</var>
+            <var class="atc_timezone">{{ event.timezone }}</var>
+            <var class="atc_title">{{ event.title }}</var>
+            <var class="atc_description">{{ event.description }}</var>
+            <var class="atc_location">{{ event.location }}</var>
+            <var class="atc_organizer">{{ event.organizer }}</var>
+            <var class="atc_organizer_email">{{ event.email }}</var>
+        </var>
+    </span>
 		</div>
 		<div class="row center">
 			<div class="col s12 m6">
@@ -26,17 +39,5 @@
                 var h = d[g]('body')[0];h.appendChild(s); }})();
     </script>
 
-    <!-- 3. Place event data -->
-    <span class="addtocalendar atc-style-blue">
-        <var class="atc_event">
-            <var class="atc_date_start">2017-05-03 17:16:25.825879</var>
-            <var class="atc_date_end">{{ event.date_end }}</var>
-            <var class="atc_timezone">{{ event.timezone }}</var>
-            <var class="atc_title">{{ event.title }}</var>
-            <var class="atc_description">{{ event.description }}</var>
-            <var class="atc_location">{{ event.location }}</var>
-            <var class="atc_organizer">{{ event.organizer }}</var>
-            <var class="atc_organizer_email">{{ event.email }}</var>
-        </var>
-    </span>
+    
 {% endblock %}
