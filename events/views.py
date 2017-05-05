@@ -10,7 +10,7 @@ from .forms import EventForm
 
 class EventCreate(LoginRequiredMixin, CreateView):
     model = Event
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('events:event')
     fields = ['date_start', 'date_end', 'title',
               'description', 'location', 'timezone',
               'organizer', 'email']
@@ -23,11 +23,11 @@ class EventDetail(LoginRequiredMixin, DetailView):
 
 class EventUpdate(LoginRequiredMixin, UpdateView):
     model = Event
-    success_url = reverse_lazy('events:home')
+    success_url = reverse_lazy('events:event')
     fields = ['date_start', 'date_end', 'title',
               'description', 'location', 'timezone',
               'organizer', 'email']
 
 class EventDelete(LoginRequiredMixin, DeleteView):
     model = Event
-    success_url = reverse_lazy('events:home')
+    success_url = reverse_lazy('events:event')
