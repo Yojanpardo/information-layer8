@@ -6,10 +6,17 @@
 	<div class="container">
 		<div class="row">
 			<div class="col s12">
-
+                {% load materialize %}
 				<form method="POST" enctype="multipart/form-data">
 					{% csrf_token %}
-					{{ form }}
+					{{ form.date_start|as_material:"m6" }}
+                    {{ form.date_end|as_material:"m6" }}
+                    {{ form.title|as_material:"m6" }}
+                    {{ form.description|as_material:"m6" }}
+                    {{ form.organizer|as_material:"m6" }}
+                    {{ form.email|as_material:"m6" }}
+                    {{ form.location|as_material:"m6" }}
+                    {{ form.timezone|as_material:"m6" }}
 
 			</div>
 		</div>
