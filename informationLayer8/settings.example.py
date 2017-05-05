@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'members',
     'events',
     'flat_responsive',
+    'materialize_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
