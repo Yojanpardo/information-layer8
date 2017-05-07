@@ -1,6 +1,6 @@
 # Information Layer 8
 
-In this application you can follow the progress of your **team** in the **data** protection, is not about the protection of servers and devices **directly**, even though when we make stronger our **team** we improve **all** the company protection.
+In this application you can follow the progress of the **data** protection in your **team**, is not about the protection of servers and devices **directly**, even though when we make stronger our **team** we improve **all** the company protection.
 
 Here you can:
 
