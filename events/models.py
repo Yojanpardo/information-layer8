@@ -19,4 +19,4 @@ class Event(models.Model):
         return self.title
 
     class Meta:
-        ordering = ('id',)
+        ordering = ('date_start',)

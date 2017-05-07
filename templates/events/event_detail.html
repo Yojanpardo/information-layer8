@@ -5,26 +5,61 @@
 {% block content %}
 	<div class="container">
 		<div class="row center">
-			<h3 class="teal-text">{{ event.title }}</h3>
-            <!-- 3. Place event data -->
-    <span class="addtocalendar btn blue-grey grey-text">
-        <var class="atc_event">
-            <var class="atc_date_start">2017-05-03 17:16:25.825879</var>
-            <var class="atc_date_end">{{ event.date_end }}</var>
-            <var class="atc_timezone">{{ event.timezone }}</var>
-            <var class="atc_title">{{ event.title }}</var>
-            <var class="atc_description">{{ event.description }}</var>
-            <var class="atc_location">{{ event.location }}</var>
-            <var class="atc_organizer">{{ event.organizer }}</var>
-            <var class="atc_organizer_email">{{ event.email }}</var>
-        </var>
-    </span>
-		</div>
-		<div class="row center">
+			<div class="col s12 m6 ">
+                <div class="row">
+                    <div class="row"></div>
+                    <div class="row grey">
+                        <div class="row"></div>
+                        <h4>{{ event.title }}</h4>
+                        <p class="flow-text">
+                            {{ event.description }}
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="row">
+                   <!-- 3. Place event data -->
+                    <span class="addtocalendar btn lime ">
+                        <var class="atc_event">
+                            <var class="atc_date_start">{{ event.date_start }}</var>
+                            <var class="atc_date_end">{{ event.date_end }}</var>
+                            <var class="atc_timezone">{{ event.timezone }}</var>
+                            <var class="atc_title">{{ event.title }}</var>
+                            <var class="atc_description">{{ event.description }}</var>
+                            <var class="atc_location">{{ event.location }}</var>
+                            <var class="atc_organizer">{{ event.organizer }}</var>
+                            <var class="atc_organizer_email">{{ event.email }}</var>
+                        </var>
+                    </span>  
+                </div>
+                        
+            </div>
+
 			<div class="col s12 m6">
 				<p class="flow-text">
-					{{ event.description }}
+                    <i class="material-icons">content_paste</i>
+					{{ event.date_start }}
 				</p>
+                <p class="flow-text">
+                    <i class="material-icons">content_paste</i>
+                    {{ event.date_end }}
+                </p>
+                <p class="flow-text">
+                    <i class="material-icons">access_time</i>
+                    {{ event.timezone }}
+                </p>
+                <p class="flow-text">
+                    <i class="material-icons">location_on</i>
+                    {{ event.location }}
+                </p>
+                <p class="flow-text">
+                    <i class="material-icons">face</i>
+                    {{ event.organizer }}
+                </p>
+                <p class="flow-text">
+                    <i class="material-icons">contact_mail</i>
+                    {{ event.email }}
+                </p>
 			</div>
 		</div>
 
