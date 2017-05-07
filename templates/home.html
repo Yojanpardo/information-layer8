@@ -5,38 +5,57 @@
 {% block content %}
 
 <div class="container">
-	<div class="row"></div>
-	<div class="row"></div>
-	<div class="row"></div>
-	<div class="row"></div>
-	<div class="row"></div>
-	<div class="row"></div>
-	<div class="row">
-		<div class="col">
-			<h1 class="hide">
-				Agregar Un saludo de bienvenida y que le diga que hace la apliacación
-				 y que puede hacer dentro de ella como dos botones para ver los eventos
-				 o ver el equipo.
-			</h1>
-		</div>
-	</div>
-  <div class="row center">
+  <div class="row">
     <div class="col s12">
        {% if user and not user.is_anonymous %}
-       <p class="flow-text">Welcome back</p>
-       <p class="flow-text blue-grey-text">
-       	{{ user.get_full_name }}
+       <p class="flow-text">Welcome back <strong>
+         {{ user.get_full_name }}
+       </strong>
        </p>
        {% endif %}
+       <p class="flow-text">
+         In this application you can follow the progress of your <strong>team</strong> in the <strong>data</strong> protection, is not about the protection of servers and devices <strong>directly</strong>, even though when we make stronger our <strong>team</strong> we improve <strong>all</strong> the company protection.
+       </p>
+       <p class="flow-text">
+         Here you can:
+       </p>
+       <p class="flow-text">
+         <i class="material-icons">assignment</i>
+         List you team and see the most important Skills or Weaknesses
+       </p>
+       <div class="row center">
+         <div class="col s12 m4 orange">
+            <p class="flow-text">  
+              Team Skill
+            </p>
+         </div>
+         <div class="col s12 m4 teal">
+           <p class="flow-text">
+             Personal Skill
+           </p>
+         </div>
+         <div class="col s12 m4 red">
+           <p class="flow-text">
+             Weaknesses
+           </p>
+         </div>
+       </div>
+       <blockquote class="flow-text grey-text">
+         (If you're admin you can add a members, update or delete the information of all of them)
+       </blockquote>
+       <p class="flow-text">
+         <i class="material-icons">account_box</i>
+         See the full description an information for each member of your team
+       </p>
+       <p class="flow-text">
+         <i class="material-icons">lightbulb_outline</i>
+         Create events and put them on your favorite calendar
+       </p>
+       <blockquote class="flow-text grey-text">
+         Remeber that all the events must be about meetings, talks or activities aimed improving the security
+       </blockquote>
     </div>
   </div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
-  <div class="row"></div>
 </div>
 
 {% endblock %}
