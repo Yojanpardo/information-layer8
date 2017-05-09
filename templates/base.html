@@ -81,9 +81,11 @@
         					{% endif %}
         				</li>
                 <li>
+                    {% if user and not user.is_anonymous %}
         						<a href="{% url "members:member" %}">
                       Team
                     </a>
+                    {% endif %}
         				</li>
                 <li>
                     {% if user and not user.is_anonymous %}
@@ -91,7 +93,7 @@
                       Events
                     </a>
                     {% endif %}
-        				</li
+        				</li>
         				<li>
         					{% if user and not user.is_anonymous %}
         						<a href="#!">{{ user.get_full_name }}</a>
