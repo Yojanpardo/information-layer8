@@ -8,7 +8,7 @@ Here you can:
 
 > (If you're admin you can add a members, update or delete the information of all of them)
 
-- See the full description an information for each member of your team
+- See the full description anda information for each member of your team
 
 - Create events and put them on your favorite calendar
 
