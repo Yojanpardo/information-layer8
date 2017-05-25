@@ -33,6 +33,11 @@
 			    {{member.under_presure}}
 			  </div>
 			</div>
+			<div class="row center">
+				{% if user and not user.is_anonymous %}
+				<a class="btn large lime blue-grey-text" href="{% url 'members:reportPDF' %}">Generar PDF</a>
+				{% endif %}
+			</div>
 		</div>
 		<div class="col s12 m6">
 

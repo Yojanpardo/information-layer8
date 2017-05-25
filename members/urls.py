@@ -10,4 +10,5 @@ urlpatterns = [
 	# 	views.MemberUpdate.as_view(), name='edit'),
     # url(r'^member/delete/(?P<pk>[0-9]+)/$',
     # 	views.MemberDelete.as_view(), name='delete'),
+    url(r'^report/$', views.reportPDF, name='reportPDF'),
 ]
