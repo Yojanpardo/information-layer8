@@ -3,7 +3,7 @@ from django.db import models
 class Member(models.Model):
     name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    phone = models.IntegerField(unique=True)
+    phone = models.CharField(max_length=11)
     email = models.EmailField(max_length=255, unique=True)
     address = models.CharField(max_length=255)
     personal_skills= models.CharField(max_length=500)

@@ -18,7 +18,7 @@ class EventCreate(LoginRequiredMixin, CreateView):
 class EventList(ListView):
     model = Event
 
-class EventDetail(LoginRequiredMixin, DetailView):
+class EventDetail(DetailView):
     model = Event
 
 class EventUpdate(LoginRequiredMixin, UpdateView):
